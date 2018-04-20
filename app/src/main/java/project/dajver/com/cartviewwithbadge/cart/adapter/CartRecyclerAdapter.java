@@ -33,6 +33,7 @@ public class CartRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
     public void updateItem(int position, CartItemsEntityModel cartItemsEntityModel) {
         if(cartItemsEntityModel.getQuantity() > 0) {
             productEntityModel.set(position, cartItemsEntityModel);
+            CartHelper.getCart().update(cartItemsEntityModel.getProduct(), cartItemsEntityModel.getQuantity());
         } else {
             CartHelper.getCart().remove(productEntityModel.get(position).getProduct());
             onItemClickListener.onUpdateList();

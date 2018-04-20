@@ -65,7 +65,7 @@ public class CartFragment extends BaseFragment implements CartRecyclerAdapter.On
 
     @OnClick(R.id.buyButton)
     public void onBuyClick() {
-        Toast.makeText(context, String.format(getString(R.string.cart_success_message), CartHelper.getCartItems().size(), CartHelper.getCart().getTotalPrice()), Toast.LENGTH_LONG).show();
+        Toast.makeText(context, String.format(getString(R.string.cart_success_message), CartHelper.getCart().getTotalQuantity(), CartHelper.getCart().getTotalPrice()), Toast.LENGTH_LONG).show();
         CartHelper.getCart().clear();
         getActivity().finish();
     }
