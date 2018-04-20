@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CartViewWithBadge</string>
+
+    <string name="cart">Cart</string>
+    <string name="products">Products</string>
+    <string name="buy">Buy</string>
+
+    <string name="cart.success.message" formatted="false">You bought %s products from your cart. With total price $%s</string>
+    <string name="dollars.format" formatted="false">$%s</string>
+</resources>
